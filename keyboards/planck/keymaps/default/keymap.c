@@ -57,7 +57,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   {KC_ESC,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_BSPC},
   {KC_TAB,  KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    KC_MINS, KC_ENT},
   {KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_UP },
-  {KC_LCTL, KC_LGUI, KC_LALT, _______, LOWER,   KC_SPC,  KC_SPC,  RAISE,   KC_RALT, KC_LEFT, KC_RIGHT,   KC_DOWN}
+  {KC_LCTL, KC_LGUI, KC_LALT, _______, RAISE,   KC_SPC,  KC_SPC,  LOWER,   KC_RALT, KC_LEFT, KC_RIGHT,   KC_DOWN}
 },
 /* old-default
 [_QWERTY] = {
@@ -104,7 +104,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   {BACKLIT, KC_LCTL, KC_LALT, KC_LGUI, LOWER,   KC_SPC,  KC_SPC,  RAISE,   KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT}
 },
 
-/* Lower
+/* Lower old-default
  * ,-----------------------------------------------------------------------------------.
  * |   ~  |   !  |   @  |   #  |   $  |   %  |   ^  |   &  |   *  |   (  |   )  | Bksp |
  * |------+------+------+------+------+-------------+------+------+------+------+------|
@@ -115,10 +115,21 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |      |      |      |      |      |             |      | Next | Vol- | Vol+ | Play |
  * `-----------------------------------------------------------------------------------'
  */
+/* Lower
+ * ,-----------------------------------------------------------------------------------.
+ * | MUTE |   1  |  2   |   3  |   4  |   5  |   6  |   7  |   8  |   9  |   0  | Del  |
+ * |------+------+------+------+------+-------------+------+------+------+------+------|
+ * |      |   !  |   "  |   §  |   $  |   %  |   &  |   /  |   (  |   )  |   =  |      |
+ * |------+------+------+------+------+------|------+------+------+------+------+------|
+ * |      |  F7  |  F8  |   '  |  F10 |  F11 |  F12 |ISO ~ |ISO | |      |      |Enter |
+ * |------+------+------+------+------+------+------+------+------+------+------+------|
+ * |      |      |      |      |      |             |      | Next | Vol- | Vol+ | Play |
+ * `-----------------------------------------------------------------------------------'
+ */
 [_LOWER] = {
   {KC_AUDIO_MUTE, KC_1, KC_2, KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_DEL},
   {_______, KC_EXLM, S(KC_2), S(KC_3), KC_DLR,  KC_PERC, S(KC_6), S(KC_7), S(KC_8), S(KC_9), S(KC_0), _______},
-  {_______, KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,S(KC_NUHS),S(KC_NUBS),KC_HOME, KC_END, _______},
+  {_______, KC_F7,   KC_RBRC,   S(KC_BSLS),   KC_F10,  KC_F11,  KC_F12,S(KC_NUHS),S(KC_NUBS),KC_HOME, KC_END, _______},
   {_______, _______, _______, _______, _______, _______, _______, _______, KC_MNXT, KC_VOLD, KC_VOLU, KC_MPLY}
 },
 /* old-lower-default
@@ -143,10 +154,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
 [_RAISE] = {
   {KC_GRV,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_BSPC},
-  {KC_DEL,  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_MINS, KC_EQL,  KC_LBRC, KC_RBRC, KC_BSLS},
-  {_______, KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,  KC_NUHS, KC_NUBS, KC_PGUP, KC_PGDN, _______},
+  {KC_DEL,  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,  KC_F6, RALT(KC_RBRC), KC_EQL, KC_LBRC, KC_RBRC, KC_BSLS},
+  {_______, KC_F7,   S(KC_RBRC),   KC_BSLS,   KC_F10,  KC_F11,  KC_F12,  KC_NUHS, KC_LBRC, KC_SCLN, KC_QUOT, _______},
   {_______, _______, _______, _______, _______, _______, _______, _______, KC_MNXT, KC_VOLD, KC_VOLU, KC_MPLY}
 },
+/*
+[_RAISE] = {
+  {KC_GRV,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_BSPC},
+  {KC_DEL,  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_MINS, KC_EQL,  KC_LBRC, KC_RBRC, KC_BSLS},
+  {_______, KC_F7,   KC_F8,   KC_BSLS,   KC_F10,  KC_F11,  KC_F12,  KC_NUHS, KC_NUBS, KC_PGUP, KC_PGDN, _______},
+  {_______, _______, _______, _______, _______, _______, _______, _______, KC_MNXT, KC_VOLD, KC_VOLU, KC_MPLY}
+},
+*/
 
 /* Plover layer (http://opensteno.org)
  * ,-----------------------------------------------------------------------------------.
