@@ -130,7 +130,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   {KC_AUDIO_MUTE, KC_1, KC_2, KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_DEL},
   {_______, KC_EXLM, S(KC_2), S(KC_3), KC_DLR,  KC_PERC, S(KC_6), S(KC_7), S(KC_8), S(KC_9), S(KC_0), _______},
   {_______, KC_F7,   KC_RBRC,   S(KC_BSLS),   KC_F10,  KC_F11,  KC_F12,S(KC_NUHS),S(KC_NUBS),KC_HOME, KC_END, _______},
-  {_______, _______, _______, _______, _______, _______, _______, _______, KC_MNXT, KC_VOLD, KC_VOLU, KC_MPLY}
+  {_______, _______, _______, _______, _______, BACKLIT, BACKLIT, _______, KC_MNXT, KC_VOLD, KC_VOLU, KC_MPLY}
 },
 /* old-lower-default
 [_LOWER] = {
@@ -156,7 +156,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   {KC_GRV,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_BSPC},
   {KC_DEL,  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,  KC_F6, RALT(KC_RBRC), KC_EQL, KC_LBRC, KC_RBRC, KC_BSLS},
   {_______, KC_F7,   S(KC_RBRC),   KC_BSLS,   KC_F10,  KC_F11,  KC_F12,  KC_NUHS, KC_LBRC, KC_SCLN, KC_QUOT, _______},
-  {_______, _______, _______, _______, _______, _______, _______, _______, KC_MNXT, KC_VOLD, KC_VOLU, KC_MPLY}
+  {_______, _______, _______, _______, _______, BACKLIT, BACKLIT, _______, KC_MNXT, KC_VOLD, KC_VOLU, KC_MPLY}
 },
 /*
 [_RAISE] = {
