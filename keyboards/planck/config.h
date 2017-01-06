@@ -38,6 +38,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #define AUDIO_VOICES
 
+/* #define BACKLIGHT_ENABLE yes */
+
 #define BACKLIGHT_PIN B7
 
 /* COL2ROW or ROW2COL */
