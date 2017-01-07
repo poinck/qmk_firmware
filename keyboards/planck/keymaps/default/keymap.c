@@ -170,7 +170,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_RAISE] = {
   {KC_GRV,  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_INS},
   {KC_MSTP,KC_MPRV,KC_MPLY,KC_MNXT,_______,_______,RALT(KC_RBRC),RALT(KC_7),RALT(KC_8),RALT(KC_9),RALT(KC_0),_______},
-  {_______,KC_GRV,S(KC_RBRC),KC_BSLS,RALT(KC_NUBS),RALT(KC_MINS),_______,S(KC_NUBS),KC_LBRC,KC_SCLN,KC_QUOT,KC_PGUP},
+  {_______,KC_GRV,S(KC_RBRC),KC_BSLS,RALT(KC_NUBS),RALT(KC_MINS),S(KC_EQL),S(KC_NUBS),KC_LBRC,KC_SCLN,KC_QUOT,KC_PGUP},
   {_______, _______, _______, _______, _______, BACKLIT, BACKLIT, _______, _______, KC_HOME, KC_END,  KC_PGDOWN}
 },
 /* old-raise-default
